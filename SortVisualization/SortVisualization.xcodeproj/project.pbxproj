@@ -27,6 +27,8 @@
 		1D5A86B120A05B0900838B79 /* FactoryModelTypeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A86B020A05B0900838B79 /* FactoryModelTypeSort.swift */; };
 		1D5A86B320A05C0800838B79 /* BubbleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A86B220A05C0800838B79 /* BubbleModel.swift */; };
 		1D5A86B520A05C6400838B79 /* TypeSortModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A86B420A05C6400838B79 /* TypeSortModelProtocol.swift */; };
+		1D5A86B720A082C100838B79 /* InsertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A86B620A082C100838B79 /* InsertModel.swift */; };
+		1D5A86B920A0855100838B79 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A86B820A0855100838B79 /* SelectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		1D5A86B020A05B0900838B79 /* FactoryModelTypeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryModelTypeSort.swift; sourceTree = "<group>"; };
 		1D5A86B220A05C0800838B79 /* BubbleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleModel.swift; sourceTree = "<group>"; };
 		1D5A86B420A05C6400838B79 /* TypeSortModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSortModelProtocol.swift; sourceTree = "<group>"; };
+		1D5A86B620A082C100838B79 /* InsertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertModel.swift; sourceTree = "<group>"; };
+		1D5A86B820A0855100838B79 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 				1D5A869920A0498800838B79 /* ArrayTypeSort.swift */,
 				1D5A86A020A04B3300838B79 /* TypeSortEntity.swift */,
 				1D5A86B220A05C0800838B79 /* BubbleModel.swift */,
+				1D5A86B620A082C100838B79 /* InsertModel.swift */,
+				1D5A86B820A0855100838B79 /* SelectionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,6 +346,8 @@
 			files = (
 				1D5A86B120A05B0900838B79 /* FactoryModelTypeSort.swift in Sources */,
 				1D5A866820A0427C00838B79 /* AppDelegate.swift in Sources */,
+				1D5A86B920A0855100838B79 /* SelectionModel.swift in Sources */,
+				1D5A86B720A082C100838B79 /* InsertModel.swift in Sources */,
 				1D5A86AB20A0545900838B79 /* UITableViewExtension.swift in Sources */,
 				1D5A869D20A049ED00838B79 /* ArrayTypeSortProtocol.swift in Sources */,
 				1D5A86AD20A0548600838B79 /* UIViewController.swift in Sources */,

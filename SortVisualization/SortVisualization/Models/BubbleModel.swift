@@ -11,6 +11,7 @@ import Foundation
 class BubbleModel: TypeSortModelProtocol {
     
     private var array = Array<Int>.makeList(count: 10, range: 999)
+    var lastStep = 0
     
     var count: Int {
         get {
@@ -22,4 +23,21 @@ class BubbleModel: TypeSortModelProtocol {
         return array[index]
     }
     
+    func stepSort() -> (at: Int, to: Int, isFinish: Bool ) {
+        var temp: Int = 0
+
+        for i in lastStep ... array.count-1 {
+            lastStep = i
+            for j in i ... array.count-1 {
+                if array[j] < array[i] {
+                    temp = array[i]
+                    array[i] = array[j]
+                    array[j] = temp
+
+                    return (at: i, to: j, isFinish: false)
+                }
+            }
+        }
+        return (at: 0, to: 0, isFinish: true)
+    }
 }

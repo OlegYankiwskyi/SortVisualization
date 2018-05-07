@@ -11,13 +11,22 @@ import UIKit
 class SortVisualization: UIViewController {
 
     var model: TypeSortModelProtocol!
+    @IBOutlet weak var tableData: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func tapButtonNextStep(_ sender: Any) {
-        
+        let result = model.stepSort()
+        if !result.isFinish {
+            let indexPath1 = IndexPath(row: result.at, section: 0)
+            let indexPath2 = IndexPath(row: result.to, section: 0)
+            tableData.beginUpdates()
+            tableData.moveRow(at: indexPath1, to: indexPath2)
+            tableData.moveRow(at: indexPath2, to: indexPath1)
+            tableData.endUpdates()
+        }
     }
 }
 

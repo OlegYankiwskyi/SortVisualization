@@ -14,12 +14,10 @@ class FactoryModelTypeSort {
         switch type {
         case .bubble:
             return BubbleModel()
-//        case .insert:
-//            return "insert"
-//        case .selection:
-//            return "selection"
-        default:
-            return BubbleModel()//TO DO
+        case .insert:
+            return InsertModel()
+        case .selection:
+            return SelectionModel()
         }
     }
 }
