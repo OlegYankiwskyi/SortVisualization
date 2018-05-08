@@ -47,7 +47,7 @@ extension SortVisualization: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DataCell.reuseIdentifier, for: indexPath) as? DataCell else {
             return UITableViewCell()
         }
-        cell.configureWith(data: String(model.get(at: indexPath.row)))
+        cell.configureWith(data: String(model[indexPath.row]))
         return cell
     }
 }

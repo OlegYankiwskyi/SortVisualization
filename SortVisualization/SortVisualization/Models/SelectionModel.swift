@@ -17,8 +17,10 @@ class SelectionModel: TypeSortModelProtocol {
         return array.count
     }
     
-    func get(at index: Int) -> Int {
-        return array[index]
+    subscript(index: Int) -> Int {
+        get {
+            return array[index]
+        }
     }
     
     func updateData() {

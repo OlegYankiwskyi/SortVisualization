@@ -10,7 +10,7 @@ import Foundation
 
 protocol TypeSortModelProtocol {
     var count: Int { get }
-    func get(at: Int) -> Int
+    subscript(index: Int) -> Int { get }
     func stepSort() -> (at: Int, to: Int, isFinish: Bool)
     func updateData()
 }

@@ -17,10 +17,12 @@ class InsertModel: TypeSortModelProtocol {
         return array.count
     }
     
-    func get(at index: Int) -> Int {
-        return array[index]
+    subscript(index: Int) -> Int {
+        get {
+            return array[index]
+        }
     }
-    
+
     func updateData() {
         array = Array<Int>.makeList(count: 10, range: 999)
         lastStep = 1
