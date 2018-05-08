@@ -29,17 +29,12 @@ class BubbleModel: TypeSortModelProtocol {
     }
     
     func stepSort() -> (at: Int, to: Int, isFinish: Bool ) {
-        var temp: Int = 0
-
         for i in lastStep ... array.count-1 {
             lastStep = i
-            for j in i ... array.count-1 {
-                if array[j] < array[i] {
-                    temp = array[i]
-                    array[i] = array[j]
-                    array[j] = temp
-
-                    return (at: i, to: j, isFinish: false)
+            for j in 0 ... array.count-2 {
+                if array[j] < array[j+1] {
+                    array.swapAt(j, j+1)
+                    return (at: j, to: j+1, isFinish: false)
                 }
             }
         }
