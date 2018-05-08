@@ -11,14 +11,17 @@ import Foundation
 class ArrayTypeSort: ArrayTypeSortProtocol {
 
     private let arrayTypeSort = [
-                        TypeSortEntity(title: "Insert", typeSort: TypeSortEnum.insert),
-                        TypeSortEntity(title: "Bubble", typeSort: TypeSortEnum.bubble),
-                        TypeSortEntity(title: "Selection", typeSort: TypeSortEnum.selection)
+                        TypeSortEntity(title: "Insert", typeSort: .insert),
+                        TypeSortEntity(title: "Bubble", typeSort: .bubble),
+                        TypeSortEntity(title: "Selection", typeSort: .selection)
                     ]
  
-    func at(index: Int) -> TypeSortEntity {
-        return arrayTypeSort[index]
+    subscript(index: Int) -> TypeSortEntity {
+        get {
+            return arrayTypeSort[index]
+        }
     }
+
     
     var count: Int {
         return arrayTypeSort.count

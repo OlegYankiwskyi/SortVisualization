@@ -27,7 +27,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TypeSortCell.reuseIdentifier, for: indexPath) as? TypeSortCell else {
             return UITableViewCell()
         }
-        cell.configureWith(data: model.at(index: indexPath.row).title)
+        cell.configureWith(data: model[indexPath.row].title)
         return cell
     }
     
@@ -41,7 +41,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 return
         }
         
-        let entityModel = model.at(index: indexPath.row)
+        let entityModel = model[indexPath.row]
         sortVisualization.model = FactoryModelTypeSort.getModel(type: entityModel.typeSort)
         sortVisualization.title = entityModel.title
         self.navigationController?.pushViewController(sortVisualization, animated: true)

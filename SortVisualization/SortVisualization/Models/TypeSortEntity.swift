@@ -8,12 +8,7 @@
 
 import Foundation
 
-class TypeSortEntity {
+struct TypeSortEntity {
     var title: String
     var typeSort: TypeSortEnum
-    
-    init(title: String, typeSort: TypeSortEnum) {
-        self.title = title
-        self.typeSort = typeSort
-    }
 }

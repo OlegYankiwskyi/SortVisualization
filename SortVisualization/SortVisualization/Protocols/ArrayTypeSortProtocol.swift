@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ArrayTypeSortProtocol {
-    func at(index: Int) -> TypeSortEntity
+    subscript(index: Int) -> TypeSortEntity { get }
     var count: Int { get }
 }

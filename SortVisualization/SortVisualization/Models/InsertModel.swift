@@ -22,7 +22,6 @@ class InsertModel: TypeSortModelProtocol {
     }
     
     func stepSort() -> (at: Int, to: Int, isFinish: Bool) {
-        
         var key = 0
         var j = 0
         
