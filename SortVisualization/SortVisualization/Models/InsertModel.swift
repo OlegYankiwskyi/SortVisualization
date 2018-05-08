@@ -11,7 +11,7 @@ import Foundation
 class InsertModel: TypeSortModelProtocol {
     
     private var array = Array<Int>.makeList(count: 10, range: 999)
-    var lastStepI = 1
+    var lastStep = 1
     
     var count: Int {
         return array.count
@@ -21,11 +21,16 @@ class InsertModel: TypeSortModelProtocol {
         return array[index]
     }
     
+    func updateData() {
+        array = Array<Int>.makeList(count: 10, range: 999)
+        lastStep = 1
+    }
+    
     func stepSort() -> (at: Int, to: Int, isFinish: Bool) {
         var key = 0
         var j = 0
         
-        for i in lastStepI ... array.count-1 {
+        for i in lastStep ... array.count-1 {
             key = array[i]
             j = i-1
         

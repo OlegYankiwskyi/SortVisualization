@@ -11,5 +11,6 @@ import Foundation
 protocol TypeSortModelProtocol {
     var count: Int { get }
     func get(at: Int) -> Int
-    func stepSort() -> (at: Int, to: Int, isFinish: Bool ) 
+    func stepSort() -> (at: Int, to: Int, isFinish: Bool)
+    func updateData()
 }

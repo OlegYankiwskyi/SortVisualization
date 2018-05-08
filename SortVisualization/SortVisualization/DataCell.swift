@@ -13,6 +13,6 @@ class DataCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     
     func configureWith(data: String) {
-        label.text = data
+        self.label.text = data
     }
 }

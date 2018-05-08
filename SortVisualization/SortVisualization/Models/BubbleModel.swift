@@ -23,6 +23,11 @@ class BubbleModel: TypeSortModelProtocol {
         return array[index]
     }
     
+    func updateData() {
+        array = Array<Int>.makeList(count: 10, range: 999)
+        lastStep = 0
+    }
+    
     func stepSort() -> (at: Int, to: Int, isFinish: Bool ) {
         var temp: Int = 0
 

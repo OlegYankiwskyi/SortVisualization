@@ -21,6 +21,11 @@ class SelectionModel: TypeSortModelProtocol {
         return array[index]
     }
     
+    func updateData() {
+        array = Array<Int>.makeList(count: 10, range: 999)
+        lastStep = 0
+    }
+    
     func stepSort() -> (at: Int, to: Int, isFinish: Bool) {
         guard array.count > 1 else { return (at: 0, to: 0, isFinish: true) }
         

@@ -12,6 +12,9 @@ class SortVisualization: UIViewController {
 
     var model: TypeSortModelProtocol!
     @IBOutlet weak var tableData: UITableView!
+    @IBOutlet weak var button: UIButton!
+    let titleButtonReload = "Reload"
+    let titleButtonNextStep = "Next Step"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,12 @@ class SortVisualization: UIViewController {
     
     @IBAction func tapButtonNextStep(_ sender: Any) {
         let result = model.stepSort()
-        if !result.isFinish {
+        if result.isFinish {
+            if button.titleLabel?.text == titleButtonNextStep {
+                button.setTitle(titleButtonReload, for: .normal)
+            }
+            showAlert()
+        } else {
             let indexPath1 = IndexPath(row: result.at, section: 0)
             let indexPath2 = IndexPath(row: result.to, section: 0)
             tableData.beginUpdates()
@@ -30,7 +38,7 @@ class SortVisualization: UIViewController {
     }
 }
 
-extension SortVisualization: UITableViewDataSource, UITableViewDelegate  {
+extension SortVisualization: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
     }
@@ -44,3 +52,15 @@ extension SortVisualization: UITableViewDataSource, UITableViewDelegate  {
     }
 }
 
+extension SortVisualization {
+    func showAlert() {
+        let alert = UIAlertController(title: "Sorting done", message: "You can update array and repeat sorting", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "update array", style: .default, handler: { (alert: UIAlertAction!) in
+            self.model.updateData()
+            self.tableData.reloadData()
+            self.button.setTitle(self.titleButtonNextStep, for: .normal)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
